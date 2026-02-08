@@ -1,11 +1,11 @@
-const CACHE_NAME = 'rb-hybrid-v5-video-cache'; // バージョンを上げてキャッシュを強制更新させる
+const CACHE_NAME = 'rb-hybrid-v6-karen-spec'; 
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './manifest.json',
-  './icon.png',
-  './verstappen.avif',  // .png から .avif に修正
-  './test.mp4'          // .f1.mp4 から test.mp4 に修正
+  './arietty.jpg',       // manifest.json で指定されているアイコン
+  './arietty.jpg',    // ★ HTMLの poster と apple-touch-icon で使用 (追加)
+  './karen.mp4'       // ★ HTMLの videoタグ で使用 (test.mp4 から変更)
 ];
 
 self.addEventListener('install', (event) => {
